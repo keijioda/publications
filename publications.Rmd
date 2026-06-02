@@ -1,0 +1,149 @@
+---
+title: "Published peer-reviewed papers"
+output: github_document
+always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r load-packages, include=FALSE}
+pacs <- c("tidyverse", "readxl", "rentrez", "XML")
+sapply(pacs, require, character.only = TRUE)
+```
+
+```{r fetch-pubmed}
+
+# Read publication list ---------------------------------------------------
+
+pub_list <- read_excel("oda_keiji_publications.xlsx") %>%
+  setNames(c("listid", "year", "authors", "pubmedid"))
+
+# Fetch from PubMed -------------------------------------------------------
+
+records <- entrez_fetch(
+  db      = "pubmed",
+  id      = pub_list$pubmedid,
+  rettype = "xml",
+  parsed  = TRUE
+)
+```
+
+```{r parse-xml}
+
+# Parse XML ---------------------------------------------------------------
+
+abbreviate_forenames <- function(author_string) {
+  authors <- strsplit(author_string, ", ")[[1]]
+  abbreviated <- sapply(authors, function(a) {
+    parts <- strsplit(a, " ")[[1]]
+    if (length(parts) < 2) return(a)
+    last     <- parts[1]
+    initials <- paste(substr(parts[-1], 1, 1), collapse = "")
+    paste0(last, " ", initials)
+  })
+  paste(abbreviated, collapse = ", ")
+}
+
+safe <- function(x, fallback = NA_character_) {
+  if (length(x) == 0 || is.null(x)) fallback else x[1]
+}
+
+articles <- xpathApply(records, "//PubmedArticle", function(node) {
+  last    <- xpathSApply(node, ".//Author/LastName", xmlValue)
+  fore    <- xpathSApply(node, ".//Author/ForeName", xmlValue)
+  authors <- if (length(last) > 0) paste(paste(last, fore), collapse = ", ") else NA_character_
+
+  doi <- safe(xpathSApply(node, ".//ELocationID[@EIdType='doi']", xmlValue))
+  if (is.na(doi)) {
+    doi <- safe(xpathSApply(node, ".//ArticleId[@IdType='doi']", xmlValue))
+  }
+
+  data.frame(
+    pmid    = safe(xpathSApply(node, ".//PMID", xmlValue)),
+    year    = safe(xpathSApply(node, ".//PubDate/Year", xmlValue)),
+    authors = authors,
+    title   = safe(xpathSApply(node, ".//ArticleTitle", xmlValue)),
+    journal = safe(xpathSApply(node, ".//Journal/Title", xmlValue)),
+    volume  = safe(xpathSApply(node, ".//JournalIssue/Volume", xmlValue)),
+    issue   = safe(xpathSApply(node, ".//JournalIssue/Issue", xmlValue)),
+    pages   = safe(xpathSApply(node, ".//MedlinePgn", xmlValue)),
+    doi     = doi,
+    stringsAsFactors = FALSE
+  )
+})
+
+pub_df <- bind_rows(articles) %>%
+  arrange(desc(year))
+
+```
+
+```{r clean-data}
+
+# Clean up ----------------------------------------------------------------
+
+pub_df$authors <- sapply(pub_df$authors, abbreviate_forenames)
+pub_df$journal <- gsub("^[Tt]he\\s+", "", pub_df$journal)
+pub_df$journal <- tools::toTitleCase(tolower(pub_df$journal))
+pub_df$journal <- gsub("Journal of Prevention \\(2022\\)", "Journal of Prevention", pub_df$journal)
+
+# Manual correction
+doi_corrections <- data.frame(
+  pmid = c("23139343"),
+  doi  = c("10.7556/jaoa.2012.112.11.726"),
+  stringsAsFactors = FALSE
+)
+
+pub_df <- pub_df %>%
+  left_join(doi_corrections, by = "pmid", suffix = c("", "_manual")) %>%
+  mutate(doi = ifelse(is.na(doi) & !is.na(doi_manual), doi_manual, doi)) %>%
+  select(-doi_manual)
+
+pub_df$journal <- gsub("\\s*:.*$", "", pub_df$journal)
+
+```
+
+```{r build-markdown, results='asis'}
+
+# Build citations ---------------------------------------------------------
+
+make_md_citation <- function(row) {
+  row <- as.list(row)
+
+  # Format volume/issue/pages
+  volissue <- if (!is.na(row$volume)) row$volume else ""
+  volissue <- if (!is.na(row$issue))  paste0(volissue, "(", row$issue, ")") else volissue
+  pages    <- if (!is.na(row$pages))  paste0(":", row$pages) else ""
+
+  # DOI or PubMed link (Markdown hyperlink)
+  link <- if (!is.na(row$doi)) {
+    sprintf("[[DOI]](https://doi.org/%s)", row$doi)
+  } else {
+    sprintf("[[PubMed]](https://pubmed.ncbi.nlm.nih.gov/%s/)", row$pmid)
+  }
+
+  # Bold my name 
+  authors_md <- gsub("Oda K\\b", "**Oda K**", row$authors, perl = TRUE)
+
+  sprintf(
+    "%s (%s). *%s* **%s** %s%s %s",
+    authors_md,
+    row$year,
+    row$title,
+    row$journal,
+    volissue,
+    pages,
+    link
+  )
+}
+
+citations <- apply(pub_df, 1, make_md_citation)
+
+# Descending count embedded in text (GFM ignores actual list numbers,
+# so we use an unordered list and prepend the number manually)
+n <- length(citations)
+for (i in seq_along(citations)) {
+  cat(sprintf("- [%d] %s\n\n", n - i + 1, citations[i]))
+}
+```

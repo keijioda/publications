@@ -161,6 +161,7 @@ pub_df <- bind_rows(pubmed_df, crossref_df) %>%
 # Clean up ----------------------------------------------------------------
 
 pub_df$authors <- sapply(pub_df$authors, abbreviate_forenames)
+pub_df$authors <- gsub("Al AA", "Al Abdrabalnabi A", pub_df$authors)
 pub_df$journal <- gsub("^[Tt]he\\s+", "", pub_df$journal)
 pub_df$journal <- tools::toTitleCase(tolower(pub_df$journal))
 pub_df$journal <- gsub("Journal of Prevention \\(2022\\)", "Journal of Prevention", pub_df$journal)

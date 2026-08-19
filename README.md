@@ -102,9 +102,9 @@ Published peer-reviewed papers
   Adolescents: The Teen Food and Development Study.* **Nutrients**
   13(12) [\[DOI\]](https://doi.org/10.3390/nu13124489)
 
-- \[45\] Al AA, Rajaram S, Bitok E, **Oda K**, Beeson WL, Kaur A, Cofán
-  M, Serra-Mir M, Roth I, Ros E, Sabaté J (2020). *Effects of
-  Supplementing the Usual Diet with a Daily Dose of Walnuts for Two
+- \[45\] Al Abdrabalnabi A, Rajaram S, Bitok E, **Oda K**, Beeson WL,
+  Kaur A, Cofán M, Serra-Mir M, Roth I, Ros E, Sabaté J (2020). *Effects
+  of Supplementing the Usual Diet with a Daily Dose of Walnuts for Two
   Years on Metabolic Syndrome and Its Components in an Elderly Cohort.*
   **Nutrients** 12(2) [\[DOI\]](https://doi.org/10.3390/nu12020451)
 

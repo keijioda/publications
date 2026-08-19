@@ -1,7 +1,7 @@
 Published peer-reviewed papers
 ================
 
-- \[59\] LeBeau K, Segovia-Siapco G, Heskey C, Clarke A, **Oda K**,
+- \[61\] LeBeau K, Segovia-Siapco G, Heskey C, Clarke A, **Oda K**,
   Sirirat R, Rice DR, Sabaté J, Matthan NR, Gilhooly CH, Petersen KS,
   Kris-Etherton P, Li Z, Reboussin DM, Rajaram S (2026). *The Effect of
   Including 1 Avocado Daily in a Habitual Diet on the Glycemic Index and
@@ -9,86 +9,86 @@ Published peer-reviewed papers
   **Current Developments in Nutrition** 10(5):107690
   [\[DOI\]](https://doi.org/10.1016/j.cdnut.2026.107690)
 
-- \[58\] Oh J, **Oda K**, Chiriac G, Fraser GE, Sirirat R, Sabaté J
+- \[60\] Oh J, **Oda K**, Chiriac G, Fraser GE, Sirirat R, Sabaté J
   (2026). *Egg Intake and the Incidence of Alzheimer’s Disease in the
   Adventist Health Study-2 Cohort Linked with Medicare Data.* **Journal
   of Nutrition** 156(6):101541
   [\[DOI\]](https://doi.org/10.1016/j.tjnut.2026.101541)
 
-- \[57\] Clarke AE, LeBeau KS, **Oda K**, Segovia-Siapco G, Paalani M,
+- \[59\] Clarke AE, LeBeau KS, **Oda K**, Segovia-Siapco G, Paalani M,
   Reboussin DM, Lichtenstein AH, Rajaram S, Sabaté J (2024). *The Effect
   of Daily Avocado Intake on Food and Nutrient Displacement in a
   Free-Living Population with Abdominal Obesity.* **Current Developments
   in Nutrition** 8(10):104451
   [\[DOI\]](https://doi.org/10.1016/j.cdnut.2024.104451)
 
-- \[56\] Amen RI, Sirirat R, **Oda K**, Rajaram S, Nwachukwu I, Cofan M,
+- \[58\] Amen RI, Sirirat R, **Oda K**, Rajaram S, Nwachukwu I, Cofan M,
   Ros E, Sabate J, Haddad EH (2023). *Effect of Walnut Supplementation
   on Dietary Polyphenol Intake and Urinary Polyphenol Excretion in the
   Walnuts and Healthy Aging Study.* **Nutrients** 15(5)
   [\[DOI\]](https://doi.org/10.3390/nu15051253)
 
-- \[55\] Jones JL, Sabaté J, Heskey C, **Oda K**, Miles F, Rajaram S
+- \[57\] Jones JL, Sabaté J, Heskey C, **Oda K**, Miles F, Rajaram S
   (2023). *Macadamia nut effects on cardiometabolic risk factors: a
   randomised trial.* **Journal of Nutritional Science** 12:e55
   [\[DOI\]](https://doi.org/10.1017/jns.2023.39)
 
-- \[54\] Jung SM, Kaur A, Amen RI, **Oda K**, Rajaram S, Sabatè J,
+- \[56\] Jung SM, Kaur A, Amen RI, **Oda K**, Rajaram S, Sabatè J,
   Haddad EH (2023). *Effect of the Fermented Soy Q-CAN® Product on
   Biomarkers of Inflammation and Oxidation in Adults with Cardiovascular
   Risk, and Canonical Correlations between the Inflammation Biomarkers
   and Blood Lipids.* **Nutrients** 15(14)
   [\[DOI\]](https://doi.org/10.3390/nu15143195)
 
-- \[53\] Oh J, **Oda K**, Brash M, Beeson WL, Sabaté J, Fraser GE,
+- \[55\] Oh J, **Oda K**, Brash M, Beeson WL, Sabaté J, Fraser GE,
   Knutsen SF (2023). *Systemic Lupus Erythematosus and the Ratio of
   Omega-3 to Omega-6 Fatty Acids Consumption among Women in the
   Adventist Health Study-2.* **Lupus** 32(14):1637-1645
   [\[DOI\]](https://doi.org/10.1177/09612033231213145)
 
-- \[52\] Jehi T, Sabaté J, Bitok E, Sala-Vila A, Ros E, Cofan M, **Oda
-  K**, Rajaram S (2022). *n-3 index is associated with cardiometabolic
+- \[54\] Jehi T, Sabaté J, Bitok E, Sala-Vila A, Ros E, Cofan M, **Oda
+  K**, Rajaram S (2023). *n-3 index is associated with cardiometabolic
   risk factors but is not improved by walnut intake in free-living
   elderly: a single-blind, randomised controlled trial.* **British
-  Journal of Nutrition** :1-8
+  Journal of Nutrition** 129(4):670-677
   [\[DOI\]](https://doi.org/10.1017/S0007114522001751)
 
-- \[51\] Oh J, **Oda K**, Brash M, Beeson WL, Sabaté J, Fraser GE,
+- \[53\] Oh J, **Oda K**, Brash M, Beeson WL, Sabaté J, Fraser GE,
   Knutsen SF (2022). *The association between dietary patterns and a
   doctor diagnosis of systemic lupus erythematosus: the Adventist Health
   Study-2.* **Lupus** 31(11):1373-1378
   [\[DOI\]](https://doi.org/10.1177/09612033221112522)
 
-- \[50\] Oh J, **Oda K**, Dang K, Ibrayev Y, Fraser GE, Knutsen SF
+- \[52\] Oh J, **Oda K**, Dang K, Ibrayev Y, Fraser GE, Knutsen SF
   (2022). *Lower Compliance with Cervical Cancer Screening Guidelines
   Among Vegetarians in North America.* **Journal of Prevention**
   43(6):783-800 [\[DOI\]](https://doi.org/10.1007/s10935-022-00691-2)
 
-- \[49\] Oh J, **Oda K**, Ibrayev Y, Reis WP, Fraser GE, Orlich MJ,
-  Knutsen SF (2022). *Lower Utilization of Colorectal Cancer Screening
-  Among Vegetarians, Adventist Health Study-2.* **Journal of Cancer
-  Education** 37(6):1948-1956
-  [\[DOI\]](https://doi.org/10.1007/s13187-021-02065-4)
-
-- \[48\] Dehom S, Knutsen S, Bahjri K, Shavlik D, **Oda K**, Ali H,
+- \[51\] Dehom S, Knutsen S, Bahjri K, Shavlik D, **Oda K**, Ali H,
   Pompe L, Spencer-Hwang R (2021). *Racial Difference in the Association
   of Long-Term Exposure to Fine Particulate Matter (PM2.5) and
   Cardiovascular Disease Mortality among Renal Transplant Recipients.*
   **International Journal of Environmental Research and Public Health**
   18(8) [\[DOI\]](https://doi.org/10.3390/ijerph18084297)
 
-- \[47\] Jung SM, Haddad EH, Kaur A, Sirirat R, Kim AY, **Oda K**,
+- \[50\] Jung SM, Haddad EH, Kaur A, Sirirat R, Kim AY, **Oda K**,
   Rajaram S, Sabaté J (2021). *A Non-Probiotic Fermented Soy Product
   Reduces Total and LDL Cholesterol: A Randomized Controlled Crossover
   Trial.* **Nutrients** 13(2)
   [\[DOI\]](https://doi.org/10.3390/nu13020535)
 
-- \[46\] Lee GJ, **Oda K**, Morton KR, Orlich M, Sabate J (2021). *Egg
+- \[49\] Lee GJ, **Oda K**, Morton KR, Orlich M, Sabate J (2021). *Egg
   intake moderates the rate of memory decline in healthy older adults.*
   **Journal of Nutritional Science** 10:e79
   [\[DOI\]](https://doi.org/10.1017/jns.2021.76)
 
-- \[45\] Rajaram S, Cofán M, Sala-Vila A, Haddad E, Serra-Mir M, Bitok
+- \[48\] Oh J, **Oda K**, Ibrayev Y, Reis WP, Fraser GE, Orlich MJ,
+  Knutsen SF (2022). *Lower Utilization of Colorectal Cancer Screening
+  Among Vegetarians, Adventist Health Study-2.* **Journal of Cancer
+  Education** 37(6):1948-1956
+  [\[DOI\]](https://doi.org/10.1007/s13187-021-02065-4)
+
+- \[47\] Rajaram S, Cofán M, Sala-Vila A, Haddad E, Serra-Mir M, Bitok
   E, Roth I, Freitas-Simoes TM, Kaur A, Valls-Pedret C, Doménech M,
   **Oda K**, Corella D, Sabaté J, Ros E (2021). *Effects of Walnut
   Consumption for 2 Years on Lipoprotein Subclasses Among Healthy
@@ -96,26 +96,26 @@ Published peer-reviewed papers
   **Circulation** 144(13):1083-1085
   [\[DOI\]](https://doi.org/10.1161/CIRCULATIONAHA.121.054051)
 
-- \[44\] Segovia-Siapco G, Paalani M, **Oda K**, Pribis P, Sabaté J
+- \[46\] Segovia-Siapco G, Paalani M, **Oda K**, Pribis P, Sabaté J
   (2021). *Associations between Avocado Consumption and Diet Quality,
   Dietary Intake, Measures of Obesity and Body Composition in
   Adolescents: The Teen Food and Development Study.* **Nutrients**
   13(12) [\[DOI\]](https://doi.org/10.3390/nu13124489)
 
-- \[43\] Al AA, Rajaram S, Bitok E, **Oda K**, Beeson WL, Kaur A, Cofán
+- \[45\] Al AA, Rajaram S, Bitok E, **Oda K**, Beeson WL, Kaur A, Cofán
   M, Serra-Mir M, Roth I, Ros E, Sabaté J (2020). *Effects of
   Supplementing the Usual Diet with a Daily Dose of Walnuts for Two
   Years on Metabolic Syndrome and Its Components in an Elderly Cohort.*
   **Nutrients** 12(2) [\[DOI\]](https://doi.org/10.3390/nu12020451)
 
-- \[42\] Haddad EH, Jaceldo-Siegl K, **Oda K**, Fraser GE (2020).
+- \[44\] Haddad EH, Jaceldo-Siegl K, **Oda K**, Fraser GE (2020).
   *Associations of Circulating Methylmalonic Acid and Vitamin B-12
   Biomarkers Are Modified by Vegan Dietary Pattern in Adult and Elderly
   Participants of the Adventist Health Study 2 Calibration Study.*
   **Current Developments in Nutrition** 4(2):nzaa008
   [\[DOI\]](https://doi.org/10.1093/cdn/nzaa008)
 
-- \[41\] Sala-Vila A, Valls-Pedret C, Rajaram S, Coll-Padrós N, Cofán M,
+- \[43\] Sala-Vila A, Valls-Pedret C, Rajaram S, Coll-Padrós N, Cofán M,
   Serra-Mir M, Pérez-Heras AM, Roth I, Freitas-Simoes TM, Doménech M,
   Calvo C, López-Illamola A, Bitok E, Buxton NK, Huey L, Arechiga A,
   **Oda K**, Lee GJ, Corella D, Vaqué-Alcázar L, Sala-Llonch R,
@@ -125,44 +125,57 @@ Published peer-reviewed papers
   Journal of Clinical Nutrition** 111(3):590-600
   [\[DOI\]](https://doi.org/10.1093/ajcn/nqz328)
 
-- \[40\] Haddad TS, Haddad E, Rajaram S, **Oda K**, Kaur A, Sabaté J
+- \[42\] Segovia-Siapco G, Khayef G, Pribis P, **Oda K**, Haddad E,
+  Sabaté J (2019). *Animal Protein Intake Is Associated with General
+  Adiposity in Adolescents: The Teen Food and Development Study.*
+  **Nutrients** 12(1) [\[DOI\]](https://doi.org/10.3390/nu12010110)
+
+- \[41\] Haddad TS, Haddad E, Rajaram S, **Oda K**, Kaur A, Sabaté J
   (2020). *The Effect of Soybean Lunasin on Cardiometabolic Risk
   Factors: A Randomized Clinical Trial.* **Journal of Dietary
   Supplements** 17(3):286-299
   [\[DOI\]](https://doi.org/10.1080/19390211.2019.1577937)
 
-- \[39\] Segovia-Siapco G, Khayef G, Pribis P, **Oda K**, Haddad E,
-  Sabaté J (2019). *Animal Protein Intake Is Associated with General
-  Adiposity in Adolescents: The Teen Food and Development Study.*
-  **Nutrients** 12(1) [\[DOI\]](https://doi.org/10.3390/nu12010110)
-
-- \[38\] Heskey C, **Oda K**, Sabaté J (2019). *Avocado Intake, and
+- \[40\] Heskey C, **Oda K**, Sabaté J (2019). *Avocado Intake, and
   Longitudinal Weight and Body Mass Index Changes in an Adult Cohort.*
   **Nutrients** 11(3) [\[DOI\]](https://doi.org/10.3390/nu11030691)
 
-- \[37\] Bitok E, Rajaram S, Jaceldo-Siegl K, **Oda K**, Sala-Vila A,
+- \[39\] Mejia M, Fresán U, Harwatt H, **Oda K**, Uriegas-Mejia G,
+  Sabaté J (2020-09-02). *Life Cycle Assessment of the Production of a
+  Large Variety of Meat Analogs by Three Diverse Factories* **Journal of
+  Hunger & Environmental Nutrition** 15(5):699-711
+  [\[DOI\]](https://doi.org/10.1080/19320248.2019.1595251)
+
+- \[38\] Bitok E, Rajaram S, Jaceldo-Siegl K, **Oda K**, Sala-Vila A,
   Serra-Mir M, Ros E, Sabaté J (2018). *Effects of Long-Term Walnut
   Supplementation on Body Weight in Free-Living Elderly: Results of a
   Randomized Controlled Trial.* **Nutrients** 10(9)
   [\[DOI\]](https://doi.org/10.3390/nu10091317)
 
-- \[36\] Damayanti D, Jaceldo-Siegl K, Beeson WL, Fraser G, **Oda K**,
+- \[37\] Damayanti D, Jaceldo-Siegl K, Beeson WL, Fraser G, **Oda K**,
   Haddad EH (2018). *Foods and Supplements Associated with Vitamin B12
   Biomarkers among Vegetarian and Non-Vegetarian Participants of the
   Adventist Health Study-2 (AHS-2) Calibration Study.* **Nutrients**
   10(6) [\[DOI\]](https://doi.org/10.3390/nu10060722)
 
-- \[35\] Haddad E, Wien M, **Oda K**, Sabaté J (2018). *Postprandial gut
+- \[36\] Haddad E, Wien M, **Oda K**, Sabaté J (2018). *Postprandial gut
   hormone responses to Hass avocado meals and their association with
   visual analog scores in overweight adults: A randomized 3 × 3
   crossover trial.* **Eating Behaviors** 31:35-40
   [\[DOI\]](https://doi.org/10.1016/j.eatbeh.2018.08.001)
 
-- \[34\] Sabaté J, Burkholder-Cooley NM, Segovia-Siapco G, **Oda K**,
+- \[35\] Sabaté J, Burkholder-Cooley NM, Segovia-Siapco G, **Oda K**,
   Wells B, Orlich MJ, Fraser GE (2018). *Unscrambling the relations of
   egg and meat consumption with type 2 diabetes risk.* **American
   Journal of Clinical Nutrition** 108(5):1121-1128
   [\[DOI\]](https://doi.org/10.1093/ajcn/nqy213)
+
+- \[34\] Burkholder-Cooley NM, Rajaram SS, Haddad EH, **Oda K**, Fraser
+  GE, Jaceldo-Siegl K (2017). *Validating polyphenol intake estimates
+  from a food-frequency questionnaire by using repeated 24-h dietary
+  recalls and a unique method-of-triads approach with 2 biomarkers.*
+  **American Journal of Clinical Nutrition** 105(3):685-694
+  [\[DOI\]](https://doi.org/10.3945/ajcn.116.137174)
 
 - \[33\] Cupino TL, Watson BA, Cupino AC, **Oda K**, Ghamsary MG,
   Soriano S, Kirsch WM (2018). *Stability and bioactivity of chitosan as
@@ -181,12 +194,10 @@ Published peer-reviewed papers
   **European Journal of Nutrition** 57(6):2287-2294
   [\[DOI\]](https://doi.org/10.1007/s00394-017-1504-1)
 
-- \[30\] Burkholder-Cooley NM, Rajaram SS, Haddad EH, **Oda K**, Fraser
-  GE, Jaceldo-Siegl K (2017). *Validating polyphenol intake estimates
-  from a food-frequency questionnaire by using repeated 24-h dietary
-  recalls and a unique method-of-triads approach with 2 biomarkers.*
-  **American Journal of Clinical Nutrition** 105(3):685-694
-  [\[DOI\]](https://doi.org/10.3945/ajcn.116.137174)
+- \[30\] Segovia-Siapco G, **Oda K**, Sabaté J (2016-12). *Evaluation of
+  the relative validity of a Web-based food frequency questionnaire used
+  to assess Soy Isoflavones and nutrient intake in adolescents* **BMC
+  Nutrition** 2(1) [\[DOI\]](https://doi.org/10.1186/s40795-016-0080-8)
 
 - \[29\] Przekop P, Haviland MG, **Oda K**, Morton KR (2015).
   *Prevalence and correlates of pain interference in older adults: why

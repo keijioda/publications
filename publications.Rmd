@@ -9,30 +9,37 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 ```{r load-packages, include=FALSE}
-pacs <- c("tidyverse", "readxl", "rentrez", "XML")
+pacs <- c("tidyverse", "readxl", "rentrez", "XML", "rcrossref")
 sapply(pacs, require, character.only = TRUE)
+
+`%||%` <- function(x, y) if (is.null(x) || length(x) == 0 || is.na(x)) y else x
+
 ```
 
 ```{r fetch-pubmed}
 
 # Read publication list ---------------------------------------------------
 
-pub_list <- read_excel("oda_keiji_publications.xlsx") %>%
-  setNames(c("listid", "year", "authors", "pubmedid"))
+pub_list <- read_excel("oda_keiji_publications_doi.xlsx") %>%
+  setNames(c("listid", "year", "authors", "pubmedid", "doi"))
+
+# Split into: has a real PubMed ID  vs.  no PubMed ID (fetch by DOI instead)
+pub_list_pmid <- pub_list %>%
+  filter(!is.na(pubmedid), pubmedid != "N/A")
+
+pub_list_doi_only <- pub_list %>%
+  filter(is.na(pubmedid) | pubmedid == "N/A") %>%
+  filter(!is.na(doi), doi != "N/A")   # can only look these up if a DOI exists
+
 
 # Fetch from PubMed -------------------------------------------------------
 
 records <- entrez_fetch(
   db      = "pubmed",
-  id      = pub_list$pubmedid,
+  id      = pub_list_pmid$pubmedid,
   rettype = "xml",
   parsed  = TRUE
 )
-```
-
-```{r parse-xml}
-
-# Parse XML ---------------------------------------------------------------
 
 abbreviate_forenames <- function(author_string) {
   authors <- strsplit(author_string, ", ")[[1]]
@@ -54,8 +61,8 @@ articles <- xpathApply(records, "//PubmedArticle", function(node) {
   last    <- xpathSApply(node, ".//Author/LastName", xmlValue)
   fore    <- xpathSApply(node, ".//Author/ForeName", xmlValue)
   authors <- if (length(last) > 0) paste(paste(last, fore), collapse = ", ") else NA_character_
+  doi     <- safe(xpathSApply(node, ".//ELocationID[@EIdType='doi']", xmlValue))
 
-  doi <- safe(xpathSApply(node, ".//ELocationID[@EIdType='doi']", xmlValue))
   if (is.na(doi)) {
     doi <- safe(xpathSApply(node, ".//ArticleId[@IdType='doi']", xmlValue))
   }
@@ -74,8 +81,78 @@ articles <- xpathApply(records, "//PubmedArticle", function(node) {
   )
 })
 
-pub_df <- bind_rows(articles) %>%
-  arrange(desc(year))
+pubmed_df <- bind_rows(articles) %>%
+  left_join(pub_list_pmid %>% select(listid, pubmedid),
+            by = c("pmid" = "pubmedid")) %>%
+  mutate(source = "PubMed")
+
+
+# Fetch from Crossref -----------------------------------------------------
+
+scalar_field <- function(df, field) {
+  if (!field %in% names(df)) return(NA_character_)
+  val <- tryCatch({
+    x <- df[[field]]
+    if (is.list(x)) x <- x[[1]]
+    x[1]
+  }, error = function(e) NA)
+  if (is.null(val) || length(val) == 0 || is.na(val)) NA_character_ else as.character(val)
+}
+
+fetch_by_doi <- function(doi) {
+  cr <- tryCatch(cr_works(dois = doi)$data, error = function(e) NULL)
+
+  if (is.null(cr) || nrow(cr) == 0) {
+    message("Crossref: no record found for DOI ", doi)
+    return(data.frame(
+      pmid = NA_character_, year = NA_character_, authors = NA_character_,
+      title = NA_character_, journal = NA_character_, volume = NA_character_,
+      issue = NA_character_, pages = NA_character_, doi = doi,
+      stringsAsFactors = FALSE
+    ))
+  }
+
+  # Author list -> "Last Forename, Last Forename" (matches the PubMed format above)
+  author_col <- if ("author" %in% names(cr)) cr$author[[1]] else NULL
+  authors <- if (!is.null(author_col) && is.data.frame(author_col) && nrow(author_col) > 0) {
+    paste(paste(author_col$family, author_col$given), collapse = ", ")
+  } else {
+    NA_character_
+  }
+
+  # Year can live under different fields depending on the record; try in order
+  year <- scalar_field(cr, "published.print")
+  if (is.na(year)) year <- scalar_field(cr, "published.online")
+  if (is.na(year)) year <- scalar_field(cr, "published")
+  if (is.na(year)) year <- scalar_field(cr, "issued")
+
+  # Page range isn't always present -- fall back to Crossref's "article-number"
+  # field, which many online-only journals use instead of a page range.
+  pages <- scalar_field(cr, "page")
+  if (is.na(pages)) pages <- scalar_field(cr, "article-number")
+
+  data.frame(
+    pmid    = NA_character_,
+    year    = year,
+    authors = authors,
+    title   = scalar_field(cr, "title"),
+    journal = scalar_field(cr, "container.title"),
+    volume  = scalar_field(cr, "volume"),
+    issue   = scalar_field(cr, "issue"),
+    pages   = pages,
+    doi     = scalar_field(cr, "doi") %||% doi,
+    stringsAsFactors = FALSE
+  )
+}
+
+crossref_df <- map_df(pub_list_doi_only$doi, fetch_by_doi) %>%
+  left_join(pub_list_doi_only %>% select(listid, doi), by = "doi") %>%
+  mutate(source = "Crossref (DOI)")
+
+
+# Combine both sources ----------------------------------------------------
+pub_df <- bind_rows(pubmed_df, crossref_df) %>%
+  arrange(listid)
 
 ```
 
@@ -87,6 +164,7 @@ pub_df$authors <- sapply(pub_df$authors, abbreviate_forenames)
 pub_df$journal <- gsub("^[Tt]he\\s+", "", pub_df$journal)
 pub_df$journal <- tools::toTitleCase(tolower(pub_df$journal))
 pub_df$journal <- gsub("Journal of Prevention \\(2022\\)", "Journal of Prevention", pub_df$journal)
+pub_df$journal <- gsub("Bmc", "BMC", pub_df$journal)
 
 # Manual correction
 doi_corrections <- data.frame(

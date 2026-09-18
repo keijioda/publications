@@ -162,22 +162,24 @@ pub_df <- bind_rows(pubmed_df, crossref_df) %>%
 
 pub_df$authors <- sapply(pub_df$authors, abbreviate_forenames)
 pub_df$authors <- gsub("Al AA", "Al Abdrabalnabi A", pub_df$authors)
+pub_df$authors <- gsub("Haddad TS", "Tabrizi SH", pub_df$authors)
 pub_df$journal <- gsub("^[Tt]he\\s+", "", pub_df$journal)
 pub_df$journal <- tools::toTitleCase(tolower(pub_df$journal))
 pub_df$journal <- gsub("Journal of Prevention \\(2022\\)", "Journal of Prevention", pub_df$journal)
 pub_df$journal <- gsub("Bmc", "BMC", pub_df$journal)
+pub_df$year <- ifelse(grepl("-", pub_df$year), substr(pub_df$year, 1, 4), pub_df$year)
 
 # Manual correction
-doi_corrections <- data.frame(
-  pmid = c("23139343"),
-  doi  = c("10.7556/jaoa.2012.112.11.726"),
-  stringsAsFactors = FALSE
-)
-
-pub_df <- pub_df %>%
-  left_join(doi_corrections, by = "pmid", suffix = c("", "_manual")) %>%
-  mutate(doi = ifelse(is.na(doi) & !is.na(doi_manual), doi_manual, doi)) %>%
-  select(-doi_manual)
+# doi_corrections <- data.frame(
+#   pmid = c("23139343"),
+#   doi  = c("10.7556/jaoa.2012.112.11.726"),
+#   stringsAsFactors = FALSE
+# )
+# 
+# pub_df <- pub_df %>%
+#   left_join(doi_corrections, by = "pmid", suffix = c("", "_manual")) %>%
+#   mutate(doi = ifelse(is.na(doi) & !is.na(doi_manual), doi_manual, doi)) %>%
+#   select(-doi_manual)
 
 pub_df$journal <- gsub("\\s*:.*$", "", pub_df$journal)
 

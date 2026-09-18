@@ -130,7 +130,7 @@ Published peer-reviewed papers
   Adiposity in Adolescents: The Teen Food and Development Study.*
   **Nutrients** 12(1) [\[DOI\]](https://doi.org/10.3390/nu12010110)
 
-- \[41\] Haddad TS, Haddad E, Rajaram S, **Oda K**, Kaur A, Sabaté J
+- \[41\] Tabrizi SH, Haddad E, Rajaram S, **Oda K**, Kaur A, Sabaté J
   (2020). *The Effect of Soybean Lunasin on Cardiometabolic Risk
   Factors: A Randomized Clinical Trial.* **Journal of Dietary
   Supplements** 17(3):286-299
@@ -141,8 +141,8 @@ Published peer-reviewed papers
   **Nutrients** 11(3) [\[DOI\]](https://doi.org/10.3390/nu11030691)
 
 - \[39\] Mejia M, Fresán U, Harwatt H, **Oda K**, Uriegas-Mejia G,
-  Sabaté J (2020-09-02). *Life Cycle Assessment of the Production of a
-  Large Variety of Meat Analogs by Three Diverse Factories* **Journal of
+  Sabaté J (2020). *Life Cycle Assessment of the Production of a Large
+  Variety of Meat Analogs by Three Diverse Factories* **Journal of
   Hunger & Environmental Nutrition** 15(5):699-711
   [\[DOI\]](https://doi.org/10.1080/19320248.2019.1595251)
 
@@ -194,7 +194,7 @@ Published peer-reviewed papers
   **European Journal of Nutrition** 57(6):2287-2294
   [\[DOI\]](https://doi.org/10.1007/s00394-017-1504-1)
 
-- \[30\] Segovia-Siapco G, **Oda K**, Sabaté J (2016-12). *Evaluation of
+- \[30\] Segovia-Siapco G, **Oda K**, Sabaté J (2016). *Evaluation of
   the relative validity of a Web-based food frequency questionnaire used
   to assess Soy Isoflavones and nutrient intake in adolescents* **BMC
   Nutrition** 2(1) [\[DOI\]](https://doi.org/10.1186/s40795-016-0080-8)
@@ -301,7 +301,7 @@ Published peer-reviewed papers
   diseases among women with irritable bowel syndrome, fibromyalgia, or
   both compared with healthy control respondents.* **Journal of the
   American Osteopathic Association** 112(11):726-35
-  [\[DOI\]](https://doi.org/10.7556/jaoa.2012.112.11.726)
+  [\[PubMed\]](https://pubmed.ncbi.nlm.nih.gov/23139343/)
 
 - \[11\] Hudthagosol C, Haddad EH, McCarthy K, Wang P, **Oda K**, Sabaté
   J (2011). *Pecans acutely increase plasma postprandial antioxidant
